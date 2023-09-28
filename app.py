@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import pandas as pd
 
-
-
 app = Flask(__name__)
 
 # Configurar a chave secreta da sessão(indicado pela IA)
