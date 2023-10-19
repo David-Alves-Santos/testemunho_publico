@@ -73,12 +73,6 @@ select{
     text-align: center;
 }
 
-
-.width{
- width: 400px;
- border: 1px solid green;
-}
-
 .local{
    
     padding: 5px;
@@ -99,3 +93,4 @@ hr{
     font-size: 29px;
     text-transform: uppercase;
 }
+
