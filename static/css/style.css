@@ -1,10 +1,18 @@
 body{
-    background-color: #f8f9fa;;
+    background-color: #f8f9fa;
+    width: 1920px;
+    height: 1223px;
+    margin: 0 auto;
+}
+
+.estilo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .principal{
     font-size: 35px;
-    border:  1px solid #00ff40;
     padding: 15px;
 }
 
@@ -21,14 +29,44 @@ body{
     flex-wrap: wrap;
 }
 
+.mes{
+    text-align: center;
+}
+
+.mesNome{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+select{
+    font-size: 20px;
+}
+
 .nome_designacao{
     text-align: center;
     margin-top: 5px;
-    font-size: 80px;
+    font-size: 40px;
+}
+
+.localRetirada, .localCarrinho{
+    margin: 0;
 }
 
 .tabela{
     background-color: #f5f5f5;;
+    width: 615px;
+    border: solid 1px rgb(201, 201, 201);
+}
+
+.tabela td{
+    font-size: 20px;
+    padding: 2px;
+}
+
+.tabela th{
+    font-size: 20px;
+    padding: 5px;
 }
     
 #table_id{
@@ -42,15 +80,19 @@ body{
 }
 
 .local{
-    background-color: #FFCC00;
+   
     padding: 5px;
     text-align: center;
-    font-size: 40px;
+    font-size: 22px;
 }
 
 .atencao{
-    padding: 5px;
-    font-size: 40px;
+   margin: 20px;
+    font-size: 20px;
+}
+
+hr{
+    margin: 0;
 }
 
 .download{

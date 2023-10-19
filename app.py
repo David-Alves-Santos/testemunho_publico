@@ -38,34 +38,26 @@ def index():
                     resultados_por_nome = {}
 
                     for index, row in df.iterrows():
-                        if (index) < 2:
+                        if index < 2:
                             continue
                         for coluna in df.columns:
-                           
                             for nome_procurado in nomes_procurados:
                                 if nome_procurado in str(row[coluna]):
                                     #print(f"Nome encontrado: {nome_procurado}")
-                                    
                                     dia_do_mes = row[df.columns[0]]  
-                                    #print(dia_do_mes)
                                     dia_da_semana = row[df.columns[1]]  
-                                    #print(dia_da_semana)
                                     nome_coluna = nomes_colunas[coluna]
-                                    #print(nome_coluna)
                                     resultados.append((dia_do_mes, dia_da_semana, nome_coluna))
-
-                                    #print(resultados)
 
                                     if nome_procurado not in resultados_por_nome:
                                         resultados_por_nome[nome_procurado] = []
                                     resultados_por_nome[nome_procurado].append((dia_do_mes, dia_da_semana, nome_coluna))
 
-
                     session['nomes_procurados'] = nomes_procurados
                     session['resultados_por_nome'] = resultados_por_nome
                     session['resultados'] = resultados
                     
-                    #print(resultados_por_nome)
+                    print(resultados_por_nome)
 
             return redirect(url_for('exibir_resultados'))
 

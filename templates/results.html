@@ -8,14 +8,50 @@
 <body>
     <section class="principal">
         <h1 class="titulo_principal">Designações Carrinho</h1>
+        <section class="estilo">
+            <div>
+                <label for="mes">Escolha uma cor:</label>
+                <input type="color" id="inputColor">
+            </div>
+            
+            <div>
+                <label for="mes">Escolha um mês:</label>
+                <select id="meses" name="mes">
+                <option value="janeiro"></option>
+                <option value="janeiro">Janeiro</option>
+                <option value="fevereiro">Fevereiro</option>
+                <option value="marco">Março</option>
+                <option value="abril">Abril</option>
+                <option value="maio">Maio</option>
+                <option value="junho">Junho</option>
+                <option value="julho">Julho</option>
+                <option value="agosto">Agosto</option>
+                <option value="setembro">Setembro</option>
+                <option value="outubro">Outubro</option>
+                <option value="novembro">Novembro</option>
+                <option value="dezembro">Dezembro</option>
+                </select>
+            </div>
+            
+            <div>  
+                <label for="carrinhoEscolha">Escolha Carrinho:</label>
+                <select id="carrinho" name="carrinhoEscolha">
+                <option value=""></option>
+                <option value="gaivotas">Gaivotas</option>
+                <option value="cantinho">Cantinho</option>
+                </select>
+            </div>
+        </section>  
+    
+
         <div class="container_tabela">
             {% for nome in nomes_procurados %}
             <div class="tabela">
-                
+                <div class="mes"><small class="mesNome"></small></div>
                 <h2 class="nome_designacao">{{ nome }}</h2>
                 <div class="local">
-                <strong>Local p/ pegar o carrinho: Maurílio ou Ana Paula</strong><br>
-                <strong>Local p/ o trabalho: Maurílio ou Salão do Reino</strong>
+                <p class="localRetirada"></p>
+                <p class="localCarrinho"></p>
                 </div>
                 <table class="table tabel-dark" id="table_id">
                     <thead class="thead-dark">
@@ -45,6 +81,7 @@
     </section>
 
 </body>
+<script src="../static/js/main.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="/js/bootstrap.min.js"></script>
