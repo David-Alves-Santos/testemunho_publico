@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const localSelecionado = seletorCarrinho.value;
         localRetiradas.forEach(function(localRetirada) {
             if(localSelecionado === "gaivotas"){
-                localRetirada.textContent = `Local de Retirada: Maurílio ou Ana Paula`;
+                localRetirada.textContent = `Local de Retirada: Maurílio`;
             } else if(localSelecionado === "cantinho"){
                 localRetirada.textContent = `Local de Retirada: Rita ou Zilda`;
             } else {

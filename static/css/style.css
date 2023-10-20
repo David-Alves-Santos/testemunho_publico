@@ -94,3 +94,17 @@ hr{
     text-transform: uppercase;
 }
 
+@media print{
+    .oculto{
+        display: none;
+    }
+
+    .tabela{
+        page-break-inside: avoid;
+    }
+
+    .titulo_principal{
+        display: none;
+    }
+
+}
