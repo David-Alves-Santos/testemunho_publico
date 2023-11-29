@@ -1,5 +1,5 @@
 body{
-    width: 100%;
+    width: 1150px;
     height: 1223px;
     margin: 0 auto;
 }
@@ -54,7 +54,7 @@ select{
 
 .tabela{
     background-color: #f5f5f5;;
-    width: 539px;
+    width: 550px;
     border: solid 1px rgb(201, 201, 201);
 }
 
