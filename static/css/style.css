@@ -50,6 +50,7 @@ select{
 
 .localRetirada, .localCarrinho{
     margin: 0;
+    font-size: 18px;
 }
 
 .tabela{

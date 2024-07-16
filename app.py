@@ -19,20 +19,15 @@ def index():
     df = None
     resultados = []
     
-    
     if request.method == 'POST':
         arquivo = request.files['planilha']
         if arquivo and arquivo.filename.endswith('.xlsx'):
             df = carregar_planilha(arquivo, header=None)
 
             if df is not None:
-                    # Restante do seu código para buscar os nomes procurados e processar os resultados
-                    #nomes_procurados = ['Francisca', 'Michel', 'Marcos' ]  # Lista de nomes a serem procurados
                    
                     nomes_procurados = df.iloc[1, 17].split(',')
-                    #print(nomes_procurados)
 
-                    # Obtenha o nome da coluna da linha 2
                     nomes_colunas = df.iloc[1]
 
                     resultados_por_nome = {}
@@ -43,7 +38,6 @@ def index():
                         for coluna in df.columns:
                             for nome_procurado in nomes_procurados:
                                 if nome_procurado in str(row[coluna]):
-                                    #print(f"Nome encontrado: {nome_procurado}")
                                     dia_do_mes = row[df.columns[0]]  
                                     dia_da_semana = row[df.columns[1]]  
                                     nome_coluna = nomes_colunas[coluna]
@@ -69,19 +63,11 @@ def exibir_resultados():
 
     resultados = session.get('resultados', [])
 
-    #print(resultados)
-
     nomes_procurados = session.get('nomes_procurados', '')
-
-    #print(nomes_procurados)
 
     resultados_por_nome = session.get('resultados_por_nome', {})
 
-    #print(resultados_por_nome)
-
     return render_template('results.html', nomes_procurados=nomes_procurados, resultados_por_nome=resultados_por_nome, resultados=resultados)
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)

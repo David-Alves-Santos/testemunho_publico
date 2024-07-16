@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const localSelecionado = seletorCarrinho.value;
         localRetiradas.forEach(function(localRetirada) {
             if(localSelecionado === "gaivotas"){
-                localRetirada.textContent = `Local de Retirada: Maurílio`;
+                localRetirada.textContent = `Local de Retirada: Maurílio ou Francisca Eudes`;
             } else if(localSelecionado === "cantinho"){
                 localRetirada.textContent = `Local de Retirada: Rita ou Zilda`;
             } else {
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         localCarrinhos.forEach(function(localCarrinho) {
             if(localSelecionado === "gaivotas"){
-                localCarrinho.textContent = `Local do Carrinho: Maurílio ou Salão do Reino`;
+                localCarrinho.textContent = `Local do Carrinho: Maurílio, Salão do Reino ou Ponto Jurubatuba`;
             } else if(localSelecionado === "cantinho"){
                 localCarrinho.textContent = `Local do Carrinho: Pizzaria em frente o Ki-Preço`;
             } else {
